@@ -1,0 +1,25 @@
+plugins {
+    id 'com.github.pfichtner.heapwatch.extension' version '0.0.1-SNAPSHOT'
+    // maxHeapSpace = '< 0.1%'
+}
+
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'com.mycompany.app'
+version = '1.0-SNAPSHOT'
+
+description = """my-app"""
+
+sourceCompatibility = 1.5
+targetCompatibility = 1.5
+tasks.withType(JavaCompile) {
+	options.encoding = 'UTF-8'
+}
+
+repositories {
+     maven { url "https://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    testCompile group: 'junit', name: 'junit', version:'4.11'
+}
