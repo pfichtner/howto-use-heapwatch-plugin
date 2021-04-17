@@ -89,15 +89,15 @@
         <configuration>
                 <gclog>${project.build.directory}/gc.log</gclog>
                 <heapSpace><le>0.1%</le></heapSpace>
-        <readStatsFrom><file>prev.json</file></readStatsFrom>
+        <readStatsFrom><file>target/stats/prev.json</file></readStatsFrom>
         <writeStatsTo>
                 <out>
-                        <file>prev.json</file>
+                        <file>target/stats/prev.json</file>
                         <onSuccess>true</onSuccess>
                         <onFailure>false</onFailure>
                 </out>
                 <out>
-                        <file>prev-on-validation-failure.json</file>
+                        <file>target/stats/prev-on-validation-failure.json</file>
                         <onSuccess>false</onSuccess>
                         <onFailure>true</onFailure>
                 </out>
