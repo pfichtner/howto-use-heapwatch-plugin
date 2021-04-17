@@ -26,5 +26,10 @@ jobs:
         key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
         restore-keys: |
           ${{ runner.os }}-maven-      
+    - name: Cache stats
+      uses: actions/cache@v2.1.4
+      with:
+        path: target/stats
+        key: ${{ runner.os }}-stats
     - name: Build with Maven
       run: mvn -B verify --file pom.xml
