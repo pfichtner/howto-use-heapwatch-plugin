@@ -14,7 +14,7 @@ public class AppTest
      */
     @Test
     public void shouldAnswerWithTrue() {
-for (int i=0; i < 10000; i++) {
+for (int i=0; i < 1000; i++) {
 System.out.println(i);
         assertEquals("foo", "foo");
         assertNotEquals("foo", "bar");
